@@ -11,7 +11,7 @@ console.log(props.location);
   return (
     <header>
       <h1> {props.title} </h1>
-      { props.location.endswith('bout') ? null : 
+      { props.location.endsWith('bout') ? null : 
       <Button
         color={props.shown ? '#b11' : 'green'}
         text={props.shown ? 'Close' : 'Add'}
