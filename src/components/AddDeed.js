@@ -4,6 +4,7 @@ import Button from './Button';
 const AddDeed = ({ onAdd }) => {
   const [text, setText] = useState('');
   const [date, setDate] = useState('');
+  const [details, setDetails] = useState('');
   const [important, setImportant] = useState(false);
 
   const onSubmit = (e) => {
@@ -13,9 +14,10 @@ const AddDeed = ({ onAdd }) => {
       return false;
     } else {
       const id = Math.floor(Math.random() * 100000 + 1);
-      onAdd({ text, date: (new Date(date)).toUTCString().slice(0,-7), important, id });
+      onAdd({ text, date: (new Date(date)).toUTCString().slice(0,-7), important, id, details });
       setText('');
       setDate('');
+      setDetails('');
       setImportant(false);
       document.querySelector('input').focus();
     }
@@ -44,6 +46,17 @@ const AddDeed = ({ onAdd }) => {
             placeholder="Date &#38; Time"
             value={date}
             onChange={(e) => setDate(e.target.value)}
+          />
+        </label>
+      </div>
+      <div className="form-control">
+        <label>
+          Details
+          <textarea
+            type="textarea"
+            placeholder="Details"
+            value={details}
+            onChange={(e) => setDetails(e.target.value)}
           />
         </label>
       </div>

@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from 'react';
 import './style.css';
+import React, { useState, useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Deeds from './components/Deeds';
 import AddDeed from './components/AddDeed';
 import Footer from './components/Footer';
 import About from './components/About';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import DeedDetails from './components/DeedDetails';
 
 export default function App() {
   let locationR = useLocation();
@@ -15,12 +16,14 @@ export default function App() {
       text: 'Meeting at Work',
       date: 'Nov 2nd at 1:10pm',
       important: true,
+      details: 'Reminder to go to the job meeting \n on Nov 2nd at 1:10pm',
     },
     {
       id: 2,
       text: 'Grocery Shopping',
       date: 'Dec 3rd at 9:30am',
       important: false,
+      details: 'Grocery Shopping details \n Nov 2nd at 1:10pm',
     },
   ]);
 
@@ -81,6 +84,7 @@ useEffect(() => {
           }
         />
         <Route path="/about" element={<About />} />
+        <Route path='/deed/:id' element={<DeedDetails deeds={deeds}/>} />
       </Routes>
       <Footer />
       </div>
