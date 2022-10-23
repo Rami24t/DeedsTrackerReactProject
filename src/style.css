@@ -12,6 +12,7 @@ body{
 }
 .container {
   padding: 1%;
+  padding-bottom: 0.5%;
   margin: auto;
   border: 1px #eee solid;
   border-radius: 5px;
@@ -23,7 +24,7 @@ body{
   max-width: 1200px;
   flex-wrap: wrap;
   /* align-items: center; */
-  min-height: 95vh;
+  min-height: 94vh;
 }
 
 header {
@@ -149,4 +150,5 @@ footer {
   margin-bottom: 0%;
   width: 100%;
   background-color: white;
+  padding-bottom: 0.5%;
 }

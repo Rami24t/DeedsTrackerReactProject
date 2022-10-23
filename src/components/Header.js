@@ -24,7 +24,7 @@ console.log(props.location);
 
 Header.defaultProps = {
   title: 'Deed Tracker',
-  link: '/'
+  link: '/home'
 };
 
 // Header.propTypes = {

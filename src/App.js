@@ -1,6 +1,6 @@
 import './style.css';
 import React, { useState, useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import Header from './components/Header';
 import Deeds from './components/Deeds';
 import AddDeed from './components/AddDeed';
@@ -59,8 +59,9 @@ let location = useLocation().pathname;
     <div className='container'>
       <Header onToggle={toggleAddDeed} shown={shown} location={location} />
       <Routes>
+        <Route path='/' element={<Navigate to='/home' replace={true}/>}/>
         <Route
-          path="/"
+          path="/home"
           element={
             <div>
               {shown ? <AddDeed onAdd={addDeed} /> : null}
