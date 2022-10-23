@@ -14,7 +14,7 @@ const AddDeed = ({ onAdd }) => {
       return false;
     } else {
       const id = Math.floor(Math.random() * 100000 + 1);
-      onAdd({ text, date: (new Date(date)).toUTCString().slice(0,-7), important, id, details });
+      onAdd({ text, date: date ? (new Date(date)).toUTCString().slice(0,-7) : 'ASAP', important, id, details });
       setText('');
       setDate('');
       setDetails('');

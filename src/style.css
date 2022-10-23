@@ -23,6 +23,7 @@ body{
   max-width: 1200px;
   flex-wrap: wrap;
   /* align-items: center; */
+  min-height: 95vh;
 }
 
 header {
@@ -142,6 +143,7 @@ footer {
   text-align: center;
   font-size: 0.8rem;
   margin: auto;
+  margin-bottom: 0%;
   width: 100%;
   background-color: white;
 }
