@@ -11,6 +11,8 @@ const DeedDetails = ({deeds}) => {
   return (
     <>
     <h2>{deed.text}- Details:</h2>
+  {deed.important ? <h3> /!\ </h3> : ''}
+    <p>When:  {deed.date} </p>
     <pre>{deed.details}</pre>
     </>
   )
