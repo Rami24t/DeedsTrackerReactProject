@@ -38,6 +38,10 @@ header {
   margin: 12px auto;
   background-color: white;
 }
+header a{
+  text-decoration: none;
+  
+}
 
 h1 {
   font-weight: 500;

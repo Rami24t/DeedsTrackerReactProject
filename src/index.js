@@ -10,8 +10,9 @@ const root = createRoot(rootElement);
 // in root.render we can render multiple things by adding commas
 
 root.render(
-  
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+      <React.StrictMode>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </React.StrictMode>
 );

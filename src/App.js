@@ -9,7 +9,6 @@ import About from './components/About';
 import DeedDetails from './components/DeedDetails';
 
 export default function App() {
-  let locationR = useLocation();
   const [deeds, setDeeds] = useState([
     {
       id: 1,
@@ -53,12 +52,8 @@ export default function App() {
   };
 
 
-  // headerButton
-const [location, setLocation] = useState('app');
-
-useEffect(() => {
-    setLocation(locationR.pathname);
-  }, [locationR]);
+  // use location to hide header button
+let location = useLocation().pathname;
   
   return (
     <div className='container'>

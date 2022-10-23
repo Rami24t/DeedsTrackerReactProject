@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 // import PropTypes from 'prop-types';
 import Button from './Button';
 
@@ -10,7 +11,7 @@ const Header = (props) => {
 console.log(props.location);
   return (
     <header>
-      <h1> {props.title} </h1>
+     <Link to={props.link}> <h1> {props.title} </h1></Link>
       { props.location.endsWith('bout') ? null : 
       <Button
         color={props.shown ? '#b11' : 'green'}
@@ -23,6 +24,7 @@ console.log(props.location);
 
 Header.defaultProps = {
   title: 'Deed Tracker',
+  link: '/'
 };
 
 // Header.propTypes = {
