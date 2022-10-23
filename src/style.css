@@ -72,6 +72,7 @@ button {
   min-width: 39%;
   min-height: 85px;
   margin: auto;
+  position: relative;
 }
 .deed h3 {
   font-weight: 500;
@@ -79,10 +80,12 @@ button {
 }
 
 .delete-icon {
-  float: right;
+  position: absolute;
+  top: 1%;
+  right: 1%;
   margin-left: 0px;
   padding: 10px;
-  padding-left: 24px;
+  padding-left: 15px;
 }
 .deed p{
   margin-bottom: 10px;
@@ -90,11 +93,11 @@ button {
 .deed a{
   font-size: 1rem;
 }
-.clearfix::after {
+/* .clearfix::after {
   content: '';
   clear: both;
   display: table;
-}
+} */
 
 .important {
   border-left: 8px solid rgba(0, 83, 0, 0.74);
