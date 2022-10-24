@@ -8,11 +8,11 @@ const Header = (props) => {
   const onClick = () => {
     props.onToggle();
   };
-console.log(props.location);
+// console.log(props.location);
   return (
     <header>
      <Link to={props.link}> <h1> {props.title} </h1></Link>
-      { props.location.endsWith('bout') ? null : 
+      { !props.location.endsWith('home') ? null : 
       <Button
         color={props.shown ? '#b11' : 'green'}
         text={props.shown ? 'Close' : 'Add'}

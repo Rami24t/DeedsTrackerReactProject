@@ -81,6 +81,7 @@ let location = useLocation().pathname;
         />
         <Route path="/about" element={<About />} />
         <Route path='/deed/:id' element={<DeedDetails deeds={deeds}/>} />
+        <Route path='*' element={<Navigate to='/home' replace={true}/>}/>
       </Routes>
       <Footer />
       </div>
