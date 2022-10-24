@@ -13,8 +13,8 @@ const AddDeed = ({ onAdd }) => {
       alert('Please add deed!');
       return false;
     } else {
-      const id = Math.floor(Math.random() * 100000 + 1);
-      onAdd({ text, date: date ? (new Date(date)).toUTCString().slice(0,-7) : 'ASAP', important, id, details });
+//      const id = Math.floor(Math.random() * 100000 + 1);
+      onAdd({ text, date: date ? (new Date(date)).toUTCString().slice(0,-7) : 'ASAP', important, details });
       setText('');
       setDate('');
       setDetails('');
