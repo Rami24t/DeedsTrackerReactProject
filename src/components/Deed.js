@@ -16,7 +16,7 @@ const Deed = ({ deed, onDelete, onToggle }) => {
           className="delete-icon"
           title='delete'
           style={{ color: 'red', cursor: 'pointer' }}
-          onClick={() => onDelete(deed.id)}
+          onClick={() => onDelete(deed?.id)}
         />
       <p> {deed.date} </p>
       <Link to={('/deed/' + deed.id)}>Details:...</Link>
