@@ -3,7 +3,7 @@
 # Techs and Programming languages
 - React
 - Javascript, HTML, CSS
-- API fetching
+- API fetching and HTML requests
 - JSON database
 
 # Deeds tracker Live Demo
