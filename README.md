@@ -2,7 +2,7 @@
 
 # Techs and Programming languages
 - React
-- Javascript, HTML, CSS
+- Javascript, JSX, HTML, CSS
 - API fetching and HTML requests
 - JSON database
 
